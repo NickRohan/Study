@@ -396,3 +396,64 @@ friend is named ${nick.friends[0]}`)
 //////////////////////////////////////////////////////////
 
 // Lesson 44 - Object Methods
+
+const nick = {
+    firstName: 'Nick',
+    lastName: 'Raubs',
+    birthYear: 1992,
+    job: 'Web dev',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: false,
+
+    // calcAge: function (birthYear) {
+    //     return 2023 - birthYear;
+    // }
+    // Function expressions can be used within an object 
+    // Function declarations cannot 
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2023 - this.birthYear;
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+
+    },
+    // checkLicense: function () {
+    //     this.license = '';
+    //     if (this.hasDriversLicense) {
+    //         this.license = 'a';
+    //     } else {
+    //         this.license = 'no'
+    //     }
+    //     return this.license;
+
+    // }
+
+    getSummary: function () {
+        return ` ${this.firstName} is a ${this.calcAge()} old ${nick.job} 
+        and he has ${this.hasDriversLicense ? 'a' : 'no'
+            } Drivers License`
+    }
+
+
+};
+
+// The <this> method allows us to call a parameter of an object
+// without hardcoding the name
+
+console.log(nick.calcAge())
+// console.log(nick.checkLicense())
+console.log(nick.age);
+
+console.log(nick.getSummary());
+
+// Challenge
+
+//console.log(`${ nick.firstName } is a ${ nick.age } old ${ nick.job }
+//and he has ${ nick.license } Drivers License`);
+
+//////////////////////////////////////////////////////////
+
+// Lesson 45 - Coding challenge #3
+
