@@ -395,6 +395,7 @@ friend is named ${nick.friends[0]}`)
 */
 //////////////////////////////////////////////////////////
 
+/*
 // Lesson 44 - Object Methods
 
 const nick = {
@@ -408,8 +409,8 @@ const nick = {
     // calcAge: function (birthYear) {
     //     return 2023 - birthYear;
     // }
-    // Function expressions can be used within an object 
-    // Function declarations cannot 
+    // Function expressions can be used within an object
+    // Function declarations cannot
     // calcAge: function () {
     //     console.log(this);
     //     return 2023 - this.birthYear;
@@ -431,7 +432,7 @@ const nick = {
     // }
 
     getSummary: function () {
-        return ` ${this.firstName} is a ${this.calcAge()} old ${nick.job} 
+        return ` ${this.firstName} is a ${this.calcAge()} old ${nick.job}
         and he has ${this.hasDriversLicense ? 'a' : 'no'
             } Drivers License`
     }
@@ -452,8 +453,74 @@ console.log(nick.getSummary());
 
 //console.log(`${ nick.firstName } is a ${ nick.age } old ${ nick.job }
 //and he has ${ nick.license } Drivers License`);
+*/
 
 //////////////////////////////////////////////////////////
 
 // Lesson 45 - Coding challenge #3
+
+/*
+const mark = {
+
+    fullName: 'Mark Miller',
+    weight: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.weight / (this.height ** 2);
+        return this.bmi;
+    }
+}
+
+//console.log(`Mark's BMI: ${mark.calcBMI()}`)
+
+const john = {
+
+    fullName: 'John Smith',
+    weight: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.weight / (this.height ** 2);
+        return this.bmi;
+    }
+}
+
+//console.log(`Johns BMI: ${john.calcBMI()}`)
+
+// const getSummary =
+// {
+//     higher: function () {
+//         let higherBMI = (john.calcBMI() > mark.calcBMI()) ? `John's BMI (${john.calcBMI()})` : `Mark's BMI (${mark.calcBMI()})`;
+//         return higherBMI;
+//     },
+//     lower: function () {
+//         let lowerBMI = (john.calcBMI() < mark.calcBMI()) ? `John's BMI (${john.calcBMI()})` : `Mark's BMI (${mark.calcBMI()})`;
+//         return lowerBMI;
+//     },
+
+// }
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi} is
+        higher than ${john.fullName}'s BMI (${john.bmi}))`)
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi} is
+        higher than ${mark.fullName}'s BMI (${mark.bmi}))`)
+}
+
+
+// console.log(`${getSummary.higherBMI()} ${mark.calcBMI()} ${john.calcBMI()}`)
+
+//console.log(`${getSummary.higher()} is higher than ${getSummary.lower()}`)
+
+//console.log(`${john.firstName}'s BMI(${john.calcBMI})
+//is higher than ${mark.firstName}`)
+
+*/
+
+//////////////////////////////////////////////////////////
+
+// Lesson 46 - Iteration: The for Loop
 
