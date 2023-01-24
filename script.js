@@ -523,4 +523,193 @@ if (mark.bmi > john.bmi) {
 //////////////////////////////////////////////////////////
 
 // Lesson 46 - Iteration: The for Loop
+/*
+// For loops let you increment values
 
+// This for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`)
+}
+*/
+
+//////////////////////////////////////////////////////////
+
+// Lesson 47 - Looping Arrays, Breaking and Continuing
+/*
+const nick = [
+    'Nick',
+    'Raubs',
+    2023 - 1992,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+for (let i = 0; i < nick.length; i++) {
+    //Reading from nick array
+    console.log(nick[i], typeof nick[i]);
+
+    // Filling types array
+    // types[i] = typeof nick[i];
+
+    types.push(typeof nick[i]);
+
+}
+
+console.log(types);
+
+const years = [1992, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2023 - years[i]);
+}
+
+console.log(ages);
+
+
+// continue and break
+console.log('-----ONLY STRINGS-----')
+for (let i = 0; i < nick.length; i++) {
+
+    if (typeof nick[i] !== 'string') continue;
+
+    console.log(nick[i], typeof nick[i]);
+}
+
+console.log('-----BREAK WITH NUMBER-----')
+for (let i = 0; i < nick.length; i++) {
+
+    if (typeof nick[i] === 'number') break;
+
+    console.log(nick[i], typeof nick[i]);
+}
+*/
+//////////////////////////////////////////////////////////
+
+// Lesson 48 - Looping Backwards and Loops  in Loops
+/*
+const nick = [
+    'Nick',
+    'Raubs',
+    2023 - 1992,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = nick.length - 1; i >= 0; i--) {
+    console.log(i, nick[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`------Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+    }
+}
+*/
+//////////////////////////////////////////////////////////
+
+// Lesson 49 - The While Loop
+/*
+for (let rep = 1; rep <= 10; rep++) {
+    //console.log(`Lifting weight repetition ${rep} 🏋️‍♀️`)
+}
+
+
+let rep = 1;
+while (rep <= 10) {
+    //console.log(`WHILE: Lifting weight repetition ${rep} 🏋️‍♀️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end....');
+}
+*/
+
+//////////////////////////////////////////////////////////
+
+// Lesson 50 - Coding challenge #4
+
+const calcTip = (bills) => {
+    if (bills >= 50 && bills <= 300) {
+        bills = bills * 0.15;
+    } else {
+        bills = bills * 0.20;
+    }
+    return bills;
+}
+
+const bills = [
+    22, 295, 176, 440, 37, 105, 10, 1100, 86, 52
+];
+
+const tips = [];
+const totals = [];
+
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i])
+    tips.push(tip);
+    totals.push(tip + bills[i])
+
+
+}
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i]
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(tips))
+console.log(calcAverage(totals))
+console.log(`Bills: ${bills}
+
+Tips: ${tips} 
+
+Totals: ${totals}`)
+
+
+
+// for (let i = 0; i < tips.length; i++) {
+//     //Reading from nick array
+//     console.log(tips[i], typeof tips[i]);
+
+// }
+
+// for (let i = 0; i < totals.length; i++) {
+//     //Reading from nick array
+//     console.log(totals[i], typeof totals[i]);
+
+// }
+
+
+
+
+
+
+// for (let i = 0; i < nick.length; i++) {
+//     //Reading from nick array
+//     console.log(nick[i], typeof nick[i]);
+
+//     // Filling types array
+//     // types[i] = typeof nick[i];
+
+//     types.push(typeof nick[i]);
+
+// }
